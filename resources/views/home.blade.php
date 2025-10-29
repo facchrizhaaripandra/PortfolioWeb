@@ -6,7 +6,7 @@
 <!-- Hero Section -->
 <section class="gradient-bg text-white py-20">
     <div class="max-w-7xl mx-auto px-4 text-center">
-        <h1 class="text-5xl font-bold mb-6">Mahasiswa Teknik Informatika</h1>
+        <h1 class="text-5xl font-bold mb-6">Fachrizha Rifky Aripandra</h1>
         <p class="text-xl mb-8">Specializing in Web Development, Data Analysis, Python, and Machine Learning</p>
         <a href="{{ route('projects') }}" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
             View My Work
