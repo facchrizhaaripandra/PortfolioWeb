@@ -14,14 +14,13 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('description');
             $table->text('excerpt');
-            $table->string('project_type');
+            $table->string('project_type'); // web, data-analysis, python, machine-learning
             $table->string('technologies');
             $table->string('github_link')->nullable();
             $table->string('live_demo_link')->nullable();
-            $table->text('embed_code')->nullable();
+            $table->string('embed_code')->nullable(); // Untuk Looker Studio embed
             $table->string('featured_image')->nullable();
-            $table->string('preview_image_url')->nullable();
-            $table->text('gallery_images')->nullable();
+            $table->json('gallery_images')->nullable();
             $table->boolean('is_featured')->default(false);
             $table->timestamps();
         });

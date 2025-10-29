@@ -1,18 +1,24 @@
-/node_modules
-/public/storage
-/storage/*.key
-/vendor
+*.log
+.DS_Store
 .env
 .env.backup
+.env.production
+.phpactor.json
 .phpunit.result.cache
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
 /.fleet
 /.idea
+/.nova
+/.phpunit.cache
 /.vscode
-
-# Hapus atau comment line berikut untuk deployment:
-# /.env
-# /database/database.sqlite
+/.zed
+/auth.json
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+Homestead.json
+Homestead.yaml
+Thumbs.db
