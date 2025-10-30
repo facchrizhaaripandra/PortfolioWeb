@@ -3,22 +3,20 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
+    public function boot()
     {
-        //
-    }
+        // Force HTTPS in production
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
 
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot(): void
-    {
-        //
+        // Set storage path for Vercel
+        if ($this->app->environment('production')) {
+            $this->app->useStoragePath('/tmp/storage');
+        }
     }
 }

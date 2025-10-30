@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "public/**/*.php",
+            "use": "@vercel/php"
+        },
+        {
+            "src": "api/**/*.php",
+            "use": "@vercel/php"
+        },
+        {
+            "src": "vercel.php",
+            "use": "@vercel/php"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/vercel.php"
+        }
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_KEY": "base64:your-existing-app-key"
+    }
+}
