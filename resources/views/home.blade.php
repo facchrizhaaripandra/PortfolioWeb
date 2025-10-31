@@ -64,7 +64,7 @@
                         <img src="{{ $project->preview_image }}"
                              alt="{{ $project->title }}"
                              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                             onerror="this.src='{{ $project->default_preview_image }}'">
+                             onerror="this.src='https://via.placeholder.com/400x300/4F46E5/FFFFFF?text={{ urlencode($project->title) }}'">
 
                         <div class="absolute top-3 left-3">
                             <span class="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded-full">

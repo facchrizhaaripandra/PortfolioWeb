@@ -8,3 +8,12 @@ Route::get('/projects', [PortfolioController::class, 'projects'])->name('project
 Route::get('/projects/{slug}', [PortfolioController::class, 'projectDetail'])->name('project.detail');
 Route::get('/about', [PortfolioController::class, 'about'])->name('about');
 Route::get('/contact', [PortfolioController::class, 'contact'])->name('contact');
+
+// Health check endpoint for Vercel
+Route::get('/up', function () {
+    return response()->json([
+        'status' => 'ok',
+        'timestamp' => now()->toISOString(),
+        'service' => 'portfolio-website'
+    ]);
+})->name('health');
