@@ -1,24 +1,22 @@
 {
     "version": 2,
-    "framework": null,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.7.4",
+            "runtime": "vercel-php@0.7.2",
             "maxDuration": 10
         }
     },
     "routes": [
-        { "src": "/build/(.*)", "dest": "/public/build/" },
-        { "src": "/up", "dest": "/api/index.php" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
     ],
-    "public": true,
-    "buildCommand": "npm run build",
-    "outputDirectory": "public",
+    "buildCommand": "npm install && npm run build",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://Portfolio-WebsiteFffDot.com",
+        "APP_URL": "https://portfolio-website-ik7powzvz-fachrizha-rifky-aripandras-projects.vercel.app",
         "APP_KEY": "base64:NRNbE1hLvR9Lqc1m8SVwPYAwu/42Vf8KIM+K+sbqVn0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -35,6 +33,5 @@
         "DB_DATABASE": "db2024_stormtorn",
         "DB_USERNAME": "db2024_stormtorn",
         "DB_PASSWORD": ""
-    },
-    "regions": ["sin1"]
+    }
 }
